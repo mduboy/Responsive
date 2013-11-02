@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+}
+#contenedor {
+    margin: 40px auto;
+    max-width: 60em;
+    /* Ancho en pixeles requeridos (divido) 16 (tamaño de fuente por defecto), en este caso 960px */
+}
+.centrado {
+    text-align: center;
+}
+.clearfix {
+    overflow: hidden;
+}
+/* Cuando Ocupa más de 600px */
+ @media screen and (min-width: 600px) {
+    #contenedor {
+        background-color: green;
+    }
+    #principal {
+        float: left;
+        width: 62.5%;
+        /* Ancho en pixeles requeridos 600(divido) 960 (tamaño de ancho usable total) = 0.625 = 62.5% */
+    }
+    aside {
+        float: left;
+        width: 37.5%;
+        /* Ancho en pixeles requeridos 360 (divido) 960 (tamaño de ancho usable total) = 0.375 = 37.5% */
+        background-color: blue;
+    }
+}
+/* Cuando Ocupa menos de 600px */
+ @media screen and (max-width: 599px) {
+    #contenedor {
+        background-color: red;
+    }
+    #principal {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
